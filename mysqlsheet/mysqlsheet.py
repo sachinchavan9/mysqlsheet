@@ -101,9 +101,9 @@ if __name__ == "__main__":
     print("\n")
     init(strip=not sys.stdout.isatty())
     fig_font = 'cricket'
-    cprint(figlet_format("sheet to mysql", font=fig_font),
+    cprint(figlet_format("MySQL Sheet", font=fig_font),
            'red', attrs=['bold'])
-    print("[!] Sheet to mysql.\n\n")
+    print("[!] MySQL Sheet.\n\n")
 
     # arguments
     argparse = ArgumentParser(description='dump big xlsheet in mysql table')
