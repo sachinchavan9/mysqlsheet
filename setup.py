@@ -10,7 +10,7 @@ with open('requirements.txt', 'r', encoding='utf-8') as f:
 
 setuptools.setup(
     name='mysqlsheet',
-    version='0.0.1',
+    version='1.0.0',
     author='Sachin Chavan',
     author_email='sachinewx@gmail.com',
     description='Push Big XL sheet in MySQL database table',
