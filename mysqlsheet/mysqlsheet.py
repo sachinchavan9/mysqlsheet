@@ -1,4 +1,4 @@
-# import important lib
+#!/usr/bin/python
 import sys
 import os
 import time
@@ -96,7 +96,7 @@ class Dumper(object):
             'total time taken by script in format (H:MM:SS.ms): {}'.format(total_time))
 
 
-if __name__ == "__main__":
+def main():
     # banner
     print("\n")
     init(strip=not sys.stdout.isatty())
