@@ -83,7 +83,8 @@ class Dumper(object):
             f.close()
 
             # push to sql
-            df.to_sql(self._table, engine, if_exists='replace')
+            df.to_sql(self._table, engine,
+                      if_exists='replace', chunksize=self._max)
         except Exception as ex:
             log.error("{} {}".format(type(ex).__name__, ex))
 
