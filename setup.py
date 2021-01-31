@@ -10,7 +10,7 @@ with open('requirements.txt', 'r', encoding='utf-8') as f:
 
 setuptools.setup(
     name='mysqlsheet',
-    version='1.0.0',
+    version='1.1.0',
     author='Sachin Chavan',
     author_email='sachinewx@gmail.com',
     description='Push Big XL sheet in MySQL database table',
@@ -24,7 +24,7 @@ setuptools.setup(
         'console_scripts': ['mysqlsheet=mysqlsheet.mysqlsheet:main'],
     },
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "Intended Audience :: Education",

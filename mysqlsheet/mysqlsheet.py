@@ -78,6 +78,7 @@ class Dumper(object):
 
         try:
             # open file
+            input('press any key to continue or CTRL+c to exit\n')
             log.debug('please wait file while is reading....')
             with open(self._big_file, buffering=int(self._file_buffer), mode="rb",) as f:
                 df = pd.read_excel(f.read())
@@ -87,7 +88,7 @@ class Dumper(object):
             log.debug('uploading data...')
             df.to_sql(self._table, engine,
                       if_exists='replace', chunksize=self._max)
-        except Exception as ex:
+        except (KeyboardInterrupt, Exception) as ex:
             log.error("{} {}".format(type(ex).__name__, ex))
 
         # calculate script execution time
@@ -132,7 +133,3 @@ def main():
 
     # call main function
     Dumper(args)
-
-
-if __name__ == "__main__":
-    main()
