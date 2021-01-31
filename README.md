@@ -12,6 +12,13 @@
 
 ```
 
+installation:
+
+```
+pip install mysqlsheet
+```
+
+
 ```
 usage: mysqlsheet.py [-h] -f FILE [-b BUFFER] [-u USER] [-p PASSWORD] [--host HOST] [--port PORT] -d DATABASE -t TABLE [-m MAX]
 
