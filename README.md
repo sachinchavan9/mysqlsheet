@@ -13,7 +13,7 @@
 ```
 
 ```
-usage: mysqlsheet [-h] -f FILE [-b BUFFER] [-u USER] [-p PASSWORD] [--host HOST] [--port PORT] -d DATABASE -t TABLE [-m MAX]
+usage: mysqlsheet.py [-h] -f FILE [-b BUFFER] [-u USER] [-p PASSWORD] [--host HOST] [--port PORT] -d DATABASE -t TABLE [-m MAX]
 
 dump big xlsheet in mysql table
 
@@ -26,7 +26,7 @@ optional arguments:
   -p PASSWORD, --password PASSWORD
                         mysql password default is empty
   --host HOST           mysql hostname default is localhost
-  --port PORT           database port number
+  --port PORT           database port number default is 3306
   -d DATABASE, --database DATABASE
                         mysql database name
   -t TABLE, --table TABLE

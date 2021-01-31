@@ -78,11 +78,13 @@ class Dumper(object):
 
         try:
             # open file
+            log.debug('please wait file while is reading....')
             with open(self._big_file, buffering=int(self._file_buffer), mode="rb",) as f:
                 df = pd.read_excel(f.read())
             f.close()
 
             # push to sql
+            log.debug('uploading data...')
             df.to_sql(self._table, engine,
                       if_exists='replace', chunksize=self._max)
         except Exception as ex:
@@ -118,7 +120,8 @@ def main():
                           help='mysql password default is empty', default='')
     argparse.add_argument(
         '--host', help='mysql hostname default is localhost', default='localhost')
-    argparse.add_argument('--port', help='database port number', default=3306)
+    argparse.add_argument(
+        '--port', help='database port number default is 3306', default=3306)
     argparse.add_argument('-d', '--database',
                           help='mysql database name', required=True)
     argparse.add_argument(
@@ -129,3 +132,7 @@ def main():
 
     # call main function
     Dumper(args)
+
+
+if __name__ == "__main__":
+    main()
